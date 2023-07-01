@@ -1,0 +1,20 @@
+<Project>
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AnalysisLevel>latest</AnalysisLevel>
+		<AnalysisMode>all</AnalysisMode>
+		<AnalysisScope>all</AnalysisScope>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<NoWarn>S3925;IDE0060</NoWarn>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference
+			Include="SonarAnalyzer.CSharp"
+			Version="9.4.0.72892"
+			PrivateAssets="all" />
+	</ItemGroup>
+</Project>

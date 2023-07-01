@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+	</PropertyGroup>
+
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Ardalis.Specification" Version="7.0.0" />
+	</ItemGroup>
+
+</Project>
