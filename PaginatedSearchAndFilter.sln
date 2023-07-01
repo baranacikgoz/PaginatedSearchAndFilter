@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F7C5970E-5D56-429D-BE49-8916007ECE32}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{BE9A957E-FE1A-4049-A44F-0DC07F4437F3}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Doc.md = docs\Doc.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B2F63BA-2789-4224-B102-945F1D966B0E}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaginatedSearchAndFilter", "src\PaginatedFilterAndSearch\PaginatedSearchAndFilter.csproj", "{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{F6907A66-F1BA-434A-A144-304852BC941B}"
+	ProjectSection(SolutionItems) = preProject
+		assets\logo.png = assets\logo.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
