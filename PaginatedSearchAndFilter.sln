@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{F6907A
 		assets\logo.png = assets\logo.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaginatedSearchAndFilter.Tests", "tests\PaginatedSearchAndFilter.Tests\PaginatedSearchAndFilter.Tests.csproj", "{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,12 +38,17 @@ Global
 		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F} = {F91AE127-A03B-49C8-87CF-5AE26D0151C8}
+		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA} = {F7C5970E-5D56-429D-BE49-8916007ECE32}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F940B78B-4F01-4DB7-9A68-D558378E1E4C}
