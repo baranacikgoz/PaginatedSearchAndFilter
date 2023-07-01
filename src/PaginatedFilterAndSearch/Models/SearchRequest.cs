@@ -41,5 +41,5 @@ public class SearchRequest
     /// </summary>
     public AdvancedFilter? AdvancedFilter { get; }
 
-    public bool HasOrderBy() => OrderBy?.Any() is true;
+    public bool HasOrderBy() => OrderBy?.Count > 0;
 }
