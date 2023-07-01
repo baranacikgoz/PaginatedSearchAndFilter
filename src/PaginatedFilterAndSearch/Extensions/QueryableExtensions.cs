@@ -27,22 +27,22 @@ public static class QueryableExtensions
         return query.Take(pageSize);
     }
 
-    private static IQueryable<T> ApplySearchByKeyword<T>(this IQueryable<T> specificationBuilder, string? keyword)
+    private static IQueryable<T> ApplySearchByKeyword<T>(this IQueryable<T> query, string? keyword)
     {
         throw new NotImplementedException();
     }
 
-    private static IQueryable<T> ApplyAdvancedSearch<T>(this IQueryable<T> specificationBuilder, AdvancedSearch? advancedSearch)
+    private static IQueryable<T> ApplyAdvancedSearch<T>(this IQueryable<T> query, AdvancedSearch? advancedSearch)
     {
         throw new NotImplementedException();
     }
 
-    private static IQueryable<T> ApplyAdvancedFilter<T>(this IQueryable<T> specificationBuilder, AdvancedFilter? filter)
+    private static IQueryable<T> ApplyAdvancedFilter<T>(this IQueryable<T> query, AdvancedFilter? filter)
     {
         throw new NotImplementedException();
     }
 
-    private static IQueryable<T> ApplyOrderBy<T>(this IQueryable<T> specificationBuilder, ICollection<string>? orderByFields)
+    private static IQueryable<T> ApplyOrderBy<T>(this IQueryable<T> query, ICollection<string>? orderByFields)
     {
         throw new NotImplementedException();
     }
