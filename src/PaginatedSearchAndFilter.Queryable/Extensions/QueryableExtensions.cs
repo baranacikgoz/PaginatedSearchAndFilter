@@ -1,8 +1,8 @@
-﻿using PaginatedFilterAndSearch.Abstractions;
-using PaginatedFilterAndSearch.Models;
+﻿using PaginatedFilterAndSearch.Queryable.Interfaces;
+using PaginatedSearchAndFilter.Models;
 using System.Diagnostics.CodeAnalysis;
 
-namespace PaginatedFilterAndSearch.Extensions;
+namespace PaginatedFilterAndSearch.Queryable.Extensions;
 
 public static class QueryableExtensions
 {

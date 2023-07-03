@@ -1,11 +1,8 @@
-﻿using PaginatedFilterAndSearch.Models;
-using System;
+﻿using PaginatedSearchAndFilter.Models;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 
-namespace PaginatedFilterAndSearch.Abstractions;
+namespace PaginatedFilterAndSearch.Queryable.Interfaces;
 
 public interface ISearchRequestAppliedQueryable<out T> : IQueryable<T>
 {

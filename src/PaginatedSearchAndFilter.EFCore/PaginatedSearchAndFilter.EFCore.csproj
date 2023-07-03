@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+	</PropertyGroup>
+
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.*" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Exceptions\" />
+	  <Folder Include="Interfaces\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\PaginatedSearchAndFilter.Models\PaginatedSearchAndFilter.Models.csproj" />
+	  <ProjectReference Include="..\PaginatedSearchAndFilter.Queryable\PaginatedSearchAndFilter.Queryable.csproj" />
+	  <ProjectReference Include="..\PaginatedSearchAndFilter.Specification\PaginatedSearchAndFilter.Specification.csproj" />
+	</ItemGroup>
+
+</Project>

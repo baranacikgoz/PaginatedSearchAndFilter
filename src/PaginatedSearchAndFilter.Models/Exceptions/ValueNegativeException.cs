@@ -1,4 +1,4 @@
-﻿namespace PaginatedFilterAndSearch.Exceptions;
+﻿namespace PaginatedSearchAndFilter.Models.Exceptions;
 
 public sealed class ValueNegativeException : ArgumentOutOfRangeException
 {

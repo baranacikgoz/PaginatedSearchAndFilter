@@ -1,10 +1,7 @@
-﻿using PaginatedFilterAndSearch.Exceptions;
-using System;
-using System.Collections.Generic;
+﻿using PaginatedSearchAndFilter.Models.Exceptions;
 using System.Diagnostics.CodeAnalysis;
-using System.Text;
 
-namespace PaginatedFilterAndSearch.Models;
+namespace PaginatedSearchAndFilter.Models;
 
 public class PaginationResponse<T>
 {

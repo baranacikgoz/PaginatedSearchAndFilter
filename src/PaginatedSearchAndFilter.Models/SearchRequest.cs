@@ -1,7 +1,7 @@
-﻿using PaginatedFilterAndSearch.Exceptions;
+﻿using PaginatedSearchAndFilter.Models.Exceptions;
 using System.Diagnostics.CodeAnalysis;
 
-namespace PaginatedFilterAndSearch.Models;
+namespace PaginatedSearchAndFilter.Models;
 
 public class SearchRequest
 {

@@ -1,9 +1,9 @@
 ﻿using Ardalis.Specification;
 using PaginatedFilterAndSearch.Interfaces;
-using PaginatedFilterAndSearch.Models;
+using PaginatedSearchAndFilter.Models;
 using System.Diagnostics.CodeAnalysis;
 
-namespace PaginatedFilterAndSearch.Extensions;
+namespace PaginatedFilterAndSearch.Specification.Extensions;
 
 public static class SpecificationBuilderExtensions
 {

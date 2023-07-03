@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace PaginatedFilterAndSearch.Models;
+namespace PaginatedSearchAndFilter.Models;
 
 public class AdvancedSearch
 {

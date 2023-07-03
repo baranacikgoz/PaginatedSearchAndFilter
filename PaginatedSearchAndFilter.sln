@@ -1,32 +1,40 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.6.33815.320
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F91AE127-A03B-49C8-87CF-5AE26D0151C8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F7C5970E-5D56-429D-BE49-8916007ECE32}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{BE9A957E-FE1A-4049-A44F-0DC07F4437F3}"
-	ProjectSection(SolutionItems) = preProject
-		docs\Doc.md = docs\Doc.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B2F63BA-2789-4224-B102-945F1D966B0E}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		Directory.Build.Props = Directory.Build.Props
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaginatedSearchAndFilter", "src\PaginatedFilterAndSearch\PaginatedSearchAndFilter.csproj", "{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{F6907A66-F1BA-434A-A144-304852BC941B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{66E5F271-1652-44D9-82F8-66AD4C1A859E}"
 	ProjectSection(SolutionItems) = preProject
 		assets\logo.png = assets\logo.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaginatedSearchAndFilter.Tests", "tests\PaginatedSearchAndFilter.Tests\PaginatedSearchAndFilter.Tests.csproj", "{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9CA06E3D-9CF5-41C3-A9DF-A37A58B33CEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaginatedSearchAndFilter.EFCore", "src\PaginatedSearchAndFilter.EFCore\PaginatedSearchAndFilter.EFCore.csproj", "{4EDEA1CE-8230-405B-86B3-09A82CBB209D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaginatedSearchAndFilter.Models", "src\PaginatedSearchAndFilter.Models\PaginatedSearchAndFilter.Models.csproj", "{575485E0-7D80-4E91-A732-8D5D187D5372}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaginatedSearchAndFilter.Queryable", "src\PaginatedSearchAndFilter.Queryable\PaginatedSearchAndFilter.Queryable.csproj", "{6E4BDF98-FBF6-44E6-A2A8-F6F4C7D7A2AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaginatedSearchAndFilter.Specification", "src\PaginatedSearchAndFilter.Specification\PaginatedSearchAndFilter.Specification.csproj", "{08E3513D-BEDC-4D91-8F8A-552FDB16A57D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{007927BB-FDA2-421F-9357-294291A52111}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Doc.md = docs\Doc.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6D99F894-F2B8-447F-8318-98D178ED3D23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaginatedSearchAndFilter.Tests", "tests\PaginatedSearchAndFilter.Tests\PaginatedSearchAndFilter.Tests.csproj", "{41046E94-DD13-4AAF-A2C3-F8D5C082746A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{09F87E81-9CB8-4986-8DD6-F524CF27A3A7}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.Props = Directory.Build.Props
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,23 +42,35 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EDEA1CE-8230-405B-86B3-09A82CBB209D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EDEA1CE-8230-405B-86B3-09A82CBB209D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EDEA1CE-8230-405B-86B3-09A82CBB209D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EDEA1CE-8230-405B-86B3-09A82CBB209D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575485E0-7D80-4E91-A732-8D5D187D5372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575485E0-7D80-4E91-A732-8D5D187D5372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575485E0-7D80-4E91-A732-8D5D187D5372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575485E0-7D80-4E91-A732-8D5D187D5372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E4BDF98-FBF6-44E6-A2A8-F6F4C7D7A2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E4BDF98-FBF6-44E6-A2A8-F6F4C7D7A2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E4BDF98-FBF6-44E6-A2A8-F6F4C7D7A2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4BDF98-FBF6-44E6-A2A8-F6F4C7D7A2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E3513D-BEDC-4D91-8F8A-552FDB16A57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E3513D-BEDC-4D91-8F8A-552FDB16A57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E3513D-BEDC-4D91-8F8A-552FDB16A57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E3513D-BEDC-4D91-8F8A-552FDB16A57D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41046E94-DD13-4AAF-A2C3-F8D5C082746A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41046E94-DD13-4AAF-A2C3-F8D5C082746A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41046E94-DD13-4AAF-A2C3-F8D5C082746A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41046E94-DD13-4AAF-A2C3-F8D5C082746A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{69A53B0F-3DAD-43E4-A228-DCEFDE74234F} = {F91AE127-A03B-49C8-87CF-5AE26D0151C8}
-		{AC762B76-05E8-4EDA-A349-5DDA7B585DBA} = {F7C5970E-5D56-429D-BE49-8916007ECE32}
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F940B78B-4F01-4DB7-9A68-D558378E1E4C}
+		{4EDEA1CE-8230-405B-86B3-09A82CBB209D} = {9CA06E3D-9CF5-41C3-A9DF-A37A58B33CEC}
+		{575485E0-7D80-4E91-A732-8D5D187D5372} = {9CA06E3D-9CF5-41C3-A9DF-A37A58B33CEC}
+		{6E4BDF98-FBF6-44E6-A2A8-F6F4C7D7A2AE} = {9CA06E3D-9CF5-41C3-A9DF-A37A58B33CEC}
+		{08E3513D-BEDC-4D91-8F8A-552FDB16A57D} = {9CA06E3D-9CF5-41C3-A9DF-A37A58B33CEC}
+		{41046E94-DD13-4AAF-A2C3-F8D5C082746A} = {6D99F894-F2B8-447F-8318-98D178ED3D23}
 	EndGlobalSection
 EndGlobal

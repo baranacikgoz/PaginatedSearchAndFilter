@@ -1,7 +1,8 @@
 ﻿using Ardalis.Specification;
-using PaginatedFilterAndSearch.Extensions;
+using PaginatedFilterAndSearch.Specification.Extensions;
+using PaginatedSearchAndFilter.Models;
 
-namespace PaginatedFilterAndSearch.Models;
+namespace PaginatedFilterAndSearch.Specification.Models;
 
 public class EntitiesBySearchRequestSpecification<TEntity> : Specification<TEntity>
     where TEntity : class

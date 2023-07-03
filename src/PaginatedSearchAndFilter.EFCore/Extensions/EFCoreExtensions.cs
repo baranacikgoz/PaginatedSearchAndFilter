@@ -1,13 +1,14 @@
 ﻿using Ardalis.Specification;
 using Microsoft.EntityFrameworkCore;
-using PaginatedFilterAndSearch.Abstractions;
-using PaginatedFilterAndSearch.Models;
+using PaginatedFilterAndSearch.Queryable.Interfaces;
+using PaginatedFilterAndSearch.Specification.Models;
+using PaginatedSearchAndFilter.Models;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 
-namespace PaginatedFilterAndSearch.Extensions;
+namespace PaginatedSearchAndFilter.EFCore.Extensions;
 
-public static class EFCoreIntegrationExtensions
+public static class EFCoreExtensions
 {
     public static async Task<PaginationResponse<TDestination>> PaginateBySpecAsync<T, TDestination>(
         [DisallowNull, NotNull] this IReadRepositoryBase<T> repository,

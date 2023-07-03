@@ -1,8 +1,5 @@
 ﻿using Ardalis.Specification;
-using PaginatedFilterAndSearch.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using PaginatedSearchAndFilter.Models;
 
 namespace PaginatedFilterAndSearch.Interfaces;
 
