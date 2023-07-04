@@ -8,7 +8,7 @@ public class SearchRequest
     public SearchRequest(
         [DisallowNull, NotNull] int pageNumber,
         [DisallowNull, NotNull] int pageSize,
-        ICollection<string>? orderby = null,
+        ICollection<OrderBy>? orderbys = null,
         string? keyword = null,
         AdvancedSearch? advancedSearch = null,
         AdvancedFilter? advancedFilter = null)
@@ -18,7 +18,7 @@ public class SearchRequest
 
         PageNumber = pageNumber;
         PageSize = pageSize;
-        OrderBy = orderby;
+        OrderBys = orderbys;
         Keyword = keyword;
         AdvancedSearch = advancedSearch;
         AdvancedFilter = advancedFilter;
@@ -28,7 +28,7 @@ public class SearchRequest
 
     public int PageSize { get; }
 
-    public ICollection<string>? OrderBy { get; }
+    public ICollection<OrderBy>? OrderBys { get; }
     public AdvancedSearch? AdvancedSearch { get; }
 
     /// <summary>
@@ -41,5 +41,5 @@ public class SearchRequest
     /// </summary>
     public AdvancedFilter? AdvancedFilter { get; }
 
-    public bool HasOrderBy() => OrderBy?.Count > 0;
+    public bool HasOrderBy() => OrderBys?.Count > 0;
 }
