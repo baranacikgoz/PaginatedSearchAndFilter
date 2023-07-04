@@ -31,7 +31,10 @@ Your endpoint will accept the JSON representation of the SearchRequest:
 ```json
 {
   "advancedSearch": {
-    "fields": ["title", "description"],
+    "fields": [
+      "title",
+      "description"
+    ],
     "keyword": "phone"
   },
   "keyword": "apple",
@@ -52,7 +55,16 @@ Your endpoint will accept the JSON representation of the SearchRequest:
   },
   "pageNumber": 1,
   "pageSize": 10,
-  "orderBy": ["price", "rating"]
+  "orderBys": [
+    {
+      "field": "price",
+      "isDescending": true
+    },
+    {
+      "field": "rating",
+      "isDescending": true
+    }
+  ]
 }
 ```
 By accepting the SearchRequest object as a parameter in your endpoint, you enable your frontend to send advanced search and filter requests, allowing users to perform complex searches and apply filters directly from your application.
@@ -90,7 +102,7 @@ var searchRequest = new SearchRequest
     },
     PageNumber = 1,
     PageSize = 10,
-    OrderBy = new List<string> { "price", "rating" }
+    OrderBys = new List<OrderBy> { new("price", true), new("rating", true) }
 };
 
 ```
