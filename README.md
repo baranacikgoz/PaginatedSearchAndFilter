@@ -1,20 +1,29 @@
 # PaginatedSearchAndFilter
+
 PaginatedSearchAndFilter is a lightweight and flexible library designed to provide search and filter functionality for paginated data in your .NET applications. It simplifies the implementation of search and filter features in your API endpoints, allowing you to offer advanced filtering and searching capabilities directly from the frontend.
 
-# Features
+## Features
 - Easy integration with your API endpoints
 - Support for JSON request bodies to encapsulate search and filter criteria
 - Programmatically construct and configure search requests using provided classes
 - Integration with LINQ and Ardalis.Specification for querying and filtering data
 - Seamless integration with EF Core for efficient database queries
 
-# Installation
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Examples](#examples)
+4. [Contributing](#contributing)
+5. [License](#license)
+
+## Installation
 TODO: Provide installation instructions for the package once it is published.
 
-# Usage
-## Creating the SearchRequest Object
-### Option 1: JSON Request Body
-To use the SearchRequest object within a JSON request body, define an endpoint (controller or minimal API) that accepts a SearchRequest object as a parameter. This object will encapsulate the search and filter criteria. Here's an example:
+## Usage
+
+### Creating the SearchRequest Object
+#### Option 1: JSON Request Body
+To use the SearchRequest object within a JSON request body, define an endpoint (controller or minimal API) that accepts a SearchRequest object as a parameter. This object will encapsulate the search and filter criteria.
 
 ```csharp
 public class ProductsController
@@ -42,7 +51,7 @@ Your endpoint will accept the JSON representation of the SearchRequest:
     "logic": "and",
     "filters": [
       {
-        "field": "price",
+        "field": "price.value",
         "operator": "gte",
         "value": "500"
       },
@@ -57,7 +66,7 @@ Your endpoint will accept the JSON representation of the SearchRequest:
   "pageSize": 10,
   "orderBys": [
     {
-      "field": "price",
+      "field": "price.value",
       "isDescending": true
     },
     {
@@ -66,11 +75,11 @@ Your endpoint will accept the JSON representation of the SearchRequest:
     }
   ]
 }
-```
-By accepting the SearchRequest object as a parameter in your endpoint, you enable your frontend to send advanced search and filter requests, allowing users to perform complex searches and apply filters directly from your application.
 
-### Option 2: Using the Constructor in Code
-You can also create instances of the provided classes and configure the properties programmatically to define the search and filter options. Here's an example of using the models within your application:
+```
+
+#### Option 2: Using the Constructor in Code
+You can also create instances of the provided classes and configure the properties programmatically to define the search and filter options.
 
 ```csharp
 var searchRequest = new SearchRequest
@@ -88,7 +97,7 @@ var searchRequest = new SearchRequest
         {
             new Filter
             {
-                Field = "price",
+                Field = "price.value",
                 Operator = "gte",
                 Value = "500"
             },
@@ -102,16 +111,18 @@ var searchRequest = new SearchRequest
     },
     PageNumber = 1,
     PageSize = 10,
-    OrderBys = new List<OrderBy> { new("price", true), new("rating", true) }
+    OrderBys = new List<OrderBy> { new("price.value", true), new("rating", true) }
 };
 
 ```
 
-## Examples
-### LINQ Example
-TODO: Provide an example of using LINQ with PaginatedSearchAndFilter once it is implemented.
 
-### Specification Example
+## Examples
+
+### LINQ
+TODO: Add examples for LINQ integration.
+
+### Specification
 ```csharp
 public class ProductsBySearchRequestSpec : EntitiesBySearchRequestSpecification<Product, ProductDto>
 {
@@ -136,8 +147,8 @@ public class SearchProductsRequestHandler : IRequestHandler<SearchProductsReques
 }
 ```
 
-# Contributing
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository. Additionally, feel free to submit pull requests with any enhancements or fixes you'd like to contribute.
+## Contributing
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository. Additionally, feel free to submit pull requests with any enhancements or fixes you'd like to contribute. For more details, please check out the [contributing guide](CONTRIBUTING.md).
 
-# License
-TODO: Add license information once it is determined for the package.
+## License
+This project is licensed under the terms of the [Apache license](LICENSE).
