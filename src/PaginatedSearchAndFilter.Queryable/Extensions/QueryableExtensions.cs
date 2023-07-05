@@ -1,5 +1,6 @@
 ﻿using PaginatedFilterAndSearch.Queryable.Interfaces;
 using PaginatedSearchAndFilter.Models;
+using PaginatedSearchAndFilter.Queryable.Extensions;
 using System.Diagnostics.CodeAnalysis;
 
 namespace PaginatedFilterAndSearch.Queryable.Extensions;
@@ -15,7 +16,7 @@ public static class QueryableExtensions
                 .ApplySearchByKeyword(request.Keyword)
                 .ApplyAdvancedSearch(request.AdvancedSearch)
                 .ApplyAdvancedFilter(request.AdvancedFilter)
-                .ApplyOrderBy(request.OrderBy), request);
+                .ApplyOrderBy(request.OrderBys), request);
 
     private static IQueryable<T> ApplyPagination<T>(this IQueryable<T> query, int pageNumber, int pageSize)
     {
@@ -42,8 +43,15 @@ public static class QueryableExtensions
         throw new NotImplementedException();
     }
 
-    private static IQueryable<T> ApplyOrderBy<T>(this IQueryable<T> query, ICollection<string>? orderByFields)
+    private static IQueryable<T> ApplyOrderBy<T>(this IQueryable<T> query, ICollection<OrderBy>? orderByFields)
     {
-        throw new NotImplementedException();
+        if (orderByFields == null)
+        {
+            return query;
+        }
+
+        query = query.PrepareOrderBy(orderByFields);
+
+        return query;
     }
 }

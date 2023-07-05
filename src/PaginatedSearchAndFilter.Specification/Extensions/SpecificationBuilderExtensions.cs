@@ -16,7 +16,7 @@ public static class SpecificationBuilderExtensions
                 .ApplySearchByKeyword(request.Keyword)
                 .ApplyAdvancedSearch(request.AdvancedSearch)
                 .ApplyAdvancedFilter(request.AdvancedFilter)
-                .ApplyOrderBy(request.OrderBy).Specification,
+                .ApplyOrderBy(request.OrderBys).Specification,
                 request);
 
     private static ISpecificationBuilder<T> ApplyPagination<T>(this ISpecificationBuilder<T> query, int pageNumber, int pageSize)
@@ -44,7 +44,7 @@ public static class SpecificationBuilderExtensions
         throw new NotImplementedException();
     }
 
-    private static ISpecificationBuilder<T> ApplyOrderBy<T>(this ISpecificationBuilder<T> specificationBuilder, ICollection<string>? orderByFields)
+    private static ISpecificationBuilder<T> ApplyOrderBy<T>(this ISpecificationBuilder<T> specificationBuilder, ICollection<OrderBy>? orderByFields)
     {
         throw new NotImplementedException();
     }
