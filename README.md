@@ -2,19 +2,21 @@
 
 PaginatedSearchAndFilter is a lightweight and flexible library designed to provide search and filter functionality for paginated data in your .NET applications. It simplifies the implementation of search and filter features in your API endpoints, allowing you to offer advanced filtering and searching capabilities directly from the frontend.
 
+## Table of Contents
+1. [Features](#features)
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Examples](#examples)
+4. [Contributing](#contributing)
+5. [License](#license)
+6. [Code of Conduct](#code-of-conduct)
+
 ## Features
 - Easy integration with your API endpoints
 - Support for JSON request bodies to encapsulate search and filter criteria
 - Programmatically construct and configure search requests using provided classes
 - Integration with LINQ and Ardalis.Specification for querying and filtering data
 - Seamless integration with EF Core for efficient database queries
-
-## Table of Contents
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Examples](#examples)
-4. [Contributing](#contributing)
-5. [License](#license)
 
 ## Installation
 TODO: Provide installation instructions for the package once it is published.
@@ -151,4 +153,7 @@ public class SearchProductsRequestHandler : IRequestHandler<SearchProductsReques
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository. Additionally, feel free to submit pull requests with any enhancements or fixes you'd like to contribute. For more details, please check out the [contributing guide](CONTRIBUTING.md).
 
 ## License
-This project is licensed under the terms of the [Apache license](LICENSE).
+This project is licensed under the terms of the [Apache License](LICENSE).
+
+## Code of Conduct
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
