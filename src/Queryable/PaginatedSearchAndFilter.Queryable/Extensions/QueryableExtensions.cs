@@ -13,10 +13,10 @@ public static class QueryableExtensions
         => new SearchRequestAppliedQueryable<T>(
                 query
                 .ApplyPagination(request.PageNumber, request.PageSize)
-                .ApplySearchByKeyword(request.Keyword)
-                .ApplyAdvancedSearch(request.AdvancedSearch)
-                .ApplyAdvancedFilter(request.AdvancedFilter)
-                .ApplyOrderBy(request.OrderBys), request);
+                .ApplyAdvancedSearches(request.AdvancedSearches)
+                .ApplyCombinedAdvancedFilters(request.CombinedAdvancedFilters)
+                .ApplyOrderBy(request.OrderBys),
+                request);
 
     private static IQueryable<T> ApplyPagination<T>(this IQueryable<T> query, int pageNumber, int pageSize)
     {
@@ -28,17 +28,12 @@ public static class QueryableExtensions
         return query.Take(pageSize);
     }
 
-    private static IQueryable<T> ApplySearchByKeyword<T>(this IQueryable<T> query, string? keyword)
+    private static IQueryable<T> ApplyAdvancedSearches<T>(this IQueryable<T> query, IEnumerable<AdvancedSearch>? advancedSearches)
     {
         throw new NotImplementedException();
     }
 
-    private static IQueryable<T> ApplyAdvancedSearch<T>(this IQueryable<T> query, AdvancedSearch? advancedSearch)
-    {
-        throw new NotImplementedException();
-    }
-
-    private static IQueryable<T> ApplyAdvancedFilter<T>(this IQueryable<T> query, AdvancedFilter? filter)
+    private static IQueryable<T> ApplyCombinedAdvancedFilters<T>(this IQueryable<T> query, CombinedAdvancedFilters? combinedAdvancedFilters)
     {
         throw new NotImplementedException();
     }

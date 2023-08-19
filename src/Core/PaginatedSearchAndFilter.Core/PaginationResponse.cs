@@ -7,30 +7,23 @@ public class PaginationResponse<T>
 {
     public PaginationResponse(
         [DisallowNull, NotNull] IEnumerable<T> data,
-        [DisallowNull, NotNull] int count,
+        [DisallowNull, NotNull] int totalCount,
         [DisallowNull, NotNull] int pageNumber,
         [DisallowNull, NotNull] int pageSize)
     {
-        ValueNegativeException.ThrowIfNegative(count, nameof(count));
+        ValueNegativeException.ThrowIfNegative(totalCount, nameof(totalCount));
         ValueNegativeException.ThrowIfNegative(pageNumber, nameof(pageNumber));
         ValueNegativeException.ThrowIfNegative(pageSize, nameof(pageSize));
 
-        var totalNumberOfPages = (int)Math.Ceiling(count / (double)pageSize);
+        var totalNumberOfPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 
-        if (pageNumber > totalNumberOfPages)
-        {
-            throw new PageNumberExceedsTotalNumberOfPagesException(pageNumber, totalNumberOfPages);
-        }
-        if (pageSize > count)
-        {
-            throw new PageSizeExceedsTotalNumberOfDataException(pageSize, count);
-        }
+        PageNumberExceedsTotalNumberOfPagesException.ThrowIfNecessary(pageNumber, totalNumberOfPages);
 
         Data = data;
         PageNumber = pageNumber;
         PageSize = pageSize;
         TotalNumberOfPages = totalNumberOfPages;
-        TotalCount = count;
+        TotalCount = totalCount;
     }
 
     public IEnumerable<T> Data { get; }

@@ -13,10 +13,10 @@ public static class SpecificationBuilderExtensions
             => new SearchRequestAppliedSpecificationBuilder<T>(
                 query
                 .ApplyPagination(request.PageNumber, request.PageSize)
-                .ApplySearchByKeyword(request.Keyword)
-                .ApplyAdvancedSearch(request.AdvancedSearch)
-                .ApplyAdvancedFilter(request.AdvancedFilter)
-                .ApplyOrderBy(request.OrderBys).Specification,
+                .ApplyAdvancedSearches(request.AdvancedSearches)
+                .ApplyCombinedAdvancedFilter(request.CombinedAdvancedFilters)
+                .ApplyOrderBy(request.OrderBys)
+                .Specification,
                 request);
 
     private static ISpecificationBuilder<T> ApplyPagination<T>(this ISpecificationBuilder<T> query, int pageNumber, int pageSize)
@@ -29,17 +29,12 @@ public static class SpecificationBuilderExtensions
         return query.Take(pageSize);
     }
 
-    private static ISpecificationBuilder<T> ApplySearchByKeyword<T>(this ISpecificationBuilder<T> specificationBuilder, string? keyword)
+    private static ISpecificationBuilder<T> ApplyAdvancedSearches<T>(this ISpecificationBuilder<T> specificationBuilder, IEnumerable<AdvancedSearch>? advancedSearches)
     {
         throw new NotImplementedException();
     }
 
-    private static ISpecificationBuilder<T> ApplyAdvancedSearch<T>(this ISpecificationBuilder<T> specificationBuilder, AdvancedSearch? advancedSearch)
-    {
-        throw new NotImplementedException();
-    }
-
-    private static ISpecificationBuilder<T> ApplyAdvancedFilter<T>(this ISpecificationBuilder<T> specificationBuilder, AdvancedFilter? filter)
+    private static ISpecificationBuilder<T> ApplyCombinedAdvancedFilter<T>(this ISpecificationBuilder<T> specificationBuilder, CombinedAdvancedFilters? combinedAdvancedFilters)
     {
         throw new NotImplementedException();
     }

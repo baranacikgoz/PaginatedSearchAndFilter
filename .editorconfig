@@ -113,6 +113,7 @@ dotnet_diagnostic.CA2016.severity = warning
 
 # IDE0058: Expression value is never used
 dotnet_diagnostic.IDE0058.severity = none
+csharp_style_prefer_primary_constructors = true:suggestion
 
 [*.vb]
 #### Naming styles ####

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+	<LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\PaginatedSearchAndFilter.Core\PaginatedSearchAndFilter.Core.csproj" />
+    <ProjectReference Include="..\..\Extensions\PaginatedSearchAndFilter.Extensions\PaginatedSearchAndFilter.Extensions.csproj" />
+  </ItemGroup>
+
+
+</Project>
