@@ -8,8 +8,8 @@ namespace PaginatedFilterAndSearch.Queryable.Extensions;
 public static class QueryableExtensions
 {
     public static ISearchRequestAppliedQueryable<T> ApplySearchReuqest<T>(
-        [DisallowNull, NotNull] this IQueryable<T> query,
-        [DisallowNull, NotNull] SearchRequest request)
+        [NotNull] this IQueryable<T> query,
+        [NotNull] SearchRequest request)
         => new SearchRequestAppliedQueryable<T>(
                 query
                 .ApplyPagination(request.PageNumber, request.PageSize)

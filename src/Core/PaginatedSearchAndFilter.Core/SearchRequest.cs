@@ -6,8 +6,8 @@ namespace PaginatedSearchAndFilter.Models;
 public class SearchRequest
 {
     public SearchRequest(
-        [DisallowNull, NotNull] int pageNumber,
-        [DisallowNull, NotNull] int pageSize,
+        [NotNull] int pageNumber,
+        [NotNull] int pageSize,
         ICollection<OrderBy>? orderBys = null,
         ICollection<AdvancedSearch>? advancedSearches = null,
         CombinedAdvancedFilters? combinedAdvancedFilters = null)

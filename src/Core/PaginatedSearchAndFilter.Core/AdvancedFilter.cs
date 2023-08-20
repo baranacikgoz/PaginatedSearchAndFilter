@@ -7,8 +7,8 @@ namespace PaginatedSearchAndFilter.Models;
 public class CombinedAdvancedFilters
 {
     public CombinedAdvancedFilters(
-        [DisallowNull, NotNull] IEnumerable<AdvancedFilter> advancedFilters,
-        [DisallowNull, NotNull] string logicOperator)
+        [NotNull] ICollection<AdvancedFilter> advancedFilters,
+        [NotNull] string logicOperator)
     {
         LogicOperators.Validate(logicOperator);
 
@@ -24,9 +24,9 @@ public class CombinedAdvancedFilters
 public class AdvancedFilter
 {
     public AdvancedFilter(
-        [DisallowNull, NotNull] string field,
-        [DisallowNull, NotNull] string @operator,
-        [DisallowNull, NotNull] string value)
+        [NotNull] string field,
+        [NotNull] string @operator,
+        [NotNull] string value)
     {
         FilterOperators.Validate(@operator);
 

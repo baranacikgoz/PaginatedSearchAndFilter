@@ -6,10 +6,10 @@ namespace PaginatedSearchAndFilter.Models;
 public class PaginationResponse<T>
 {
     public PaginationResponse(
-        [DisallowNull, NotNull] IEnumerable<T> data,
-        [DisallowNull, NotNull] int totalCount,
-        [DisallowNull, NotNull] int pageNumber,
-        [DisallowNull, NotNull] int pageSize)
+        [NotNull] IEnumerable<T> data,
+        [NotNull] int totalCount,
+        [NotNull] int pageNumber,
+        [NotNull] int pageSize)
     {
         ValueNegativeException.ThrowIfNegative(totalCount, nameof(totalCount));
         ValueNegativeException.ThrowIfNegative(pageNumber, nameof(pageNumber));

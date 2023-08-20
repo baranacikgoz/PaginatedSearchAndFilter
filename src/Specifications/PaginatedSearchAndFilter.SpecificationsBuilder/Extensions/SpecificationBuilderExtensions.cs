@@ -8,8 +8,8 @@ namespace PaginatedFilterAndSearch.Specification.Extensions;
 public static class SpecificationBuilderExtensions
 {
     public static ISearchRequestAppliedSpecificationBuilder<T> ApplySearchRequest<T>(
-        [DisallowNull, NotNull] this ISpecificationBuilder<T> query,
-        [DisallowNull, NotNull] SearchRequest request)
+        [NotNull] this ISpecificationBuilder<T> query,
+        [NotNull] SearchRequest request)
             => new SearchRequestAppliedSpecificationBuilder<T>(
                 query
                 .ApplyPagination(request.PageNumber, request.PageSize)

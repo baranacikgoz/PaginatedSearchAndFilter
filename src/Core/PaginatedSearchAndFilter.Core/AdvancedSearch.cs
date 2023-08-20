@@ -4,12 +4,14 @@ namespace PaginatedSearchAndFilter.Models;
 
 public class AdvancedSearch
 {
-    public AdvancedSearch(string field, string keyword)
+    public AdvancedSearch(
+        [NotNull] string field, 
+        [NotNull] object value)
     {
-        Fields = field;
-        Keyword = keyword;
+        Field = field;
+        Value = value;
     }
 
-    public string Fields { get; }
-    public string Keyword { get; }
+    public string Field { get; }
+    public object Value { get; }
 }

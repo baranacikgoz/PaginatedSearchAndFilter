@@ -1,12 +1,24 @@
-﻿namespace PaginatedSearchAndFilter.Models.Exceptions;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace PaginatedSearchAndFilter.Models.Exceptions;
 
 public sealed class ValueNegativeException : ArgumentOutOfRangeException
 {
-    private ValueNegativeException(string valueName, int value) : base($"Value ({value}) is negative for {valueName}.]")
+    private ValueNegativeException(
+        [NotNull] string valueName,
+        [NotNull] int value) 
+        : base($"Value ({value}) is negative for {valueName}.")
     {
+        ValueName = valueName;
+        Value = value;
     }
 
-    public static void ThrowIfNegative(int value, string valueName)
+    public string ValueName { get; }
+    public int Value { get; }
+
+    public static void ThrowIfNegative(
+        [NotNull] int value,
+        [NotNull] string valueName)
     {
         if (value < 0)
         {

@@ -1,12 +1,24 @@
-﻿namespace PaginatedSearchAndFilter.Models.Exceptions;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace PaginatedSearchAndFilter.Models.Exceptions;
 
 public sealed class PageNumberExceedsTotalNumberOfPagesException : Exception
 {
-    private PageNumberExceedsTotalNumberOfPagesException(int pageNumber, int totalNumberOfPages) : base($"Page number ({pageNumber}) exceeds the total number of pages ({totalNumberOfPages}).]")
+    private PageNumberExceedsTotalNumberOfPagesException(
+        [NotNull] int pageNumber,
+        [NotNull] int totalNumberOfPages) 
+        : base($"Page number ({pageNumber}) exceeds the total number of pages ({totalNumberOfPages}).")
     {
+        PageNumber = pageNumber;
+        TotalNumberOfPages = totalNumberOfPages;
     }
 
-    public static void ThrowIfNecessary(int pageNumber, int totalNumberOfPages)
+    public int PageNumber { get; }
+    public int TotalNumberOfPages { get; }
+
+    public static void ThrowIfNecessary(
+        [NotNull] int pageNumber,
+        [NotNull] int totalNumberOfPages)
     {
         if (pageNumber > totalNumberOfPages)
         {

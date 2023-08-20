@@ -9,7 +9,7 @@ public class PaginatedSearchAndFilterOptions
     internal ICache? Cache { get; set; }
 
     // Use Action<IServiceCollection> to define the delegate
-    internal Action<IServiceCollection> ConfigureServicesAction { get; set; }
+    internal Action<IServiceCollection>? ConfigureServicesAction { get; set; }
 
     public PaginatedSearchAndFilterOptions UseCache(ICache? cache)
     {

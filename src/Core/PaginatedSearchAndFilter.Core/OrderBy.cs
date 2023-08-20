@@ -1,8 +1,12 @@
-﻿namespace PaginatedSearchAndFilter.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace PaginatedSearchAndFilter.Models;
 
 public class OrderBy
 {
-    public OrderBy(string field, bool isDescending)
+    public OrderBy(
+        [NotNull] string field,
+        [NotNull] bool isDescending)
     {
         Field = field;
         IsDescending = isDescending;

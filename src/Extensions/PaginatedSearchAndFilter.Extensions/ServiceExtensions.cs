@@ -2,12 +2,15 @@
 using Microsoft.Extensions.DependencyInjection;
 using PaginatedSearchAndFilter.Core.Abstractions;
 using PaginatedSearchAndFilter.Core.Implementations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace PaginatedSearchAndFilter.Extensions;
 
 public static class ServiceExtensions
 {
-    public static void AddPaginatedSearchAndFilter(this IServiceCollection services, Action<PaginatedSearchAndFilterOptions> configureOptions)
+    public static void AddPaginatedSearchAndFilter(
+        [NotNull] this IServiceCollection services,
+        [NotNull] Action<PaginatedSearchAndFilterOptions> configureOptions)
     {
         var options = new PaginatedSearchAndFilterOptions();
         configureOptions(options);
@@ -20,9 +23,11 @@ public static class ServiceExtensions
         options.ConfigureServicesAction?.Invoke(services);
     }
 
-    public static IApplicationBuilder InitializePaginatedSearchAndFilterCache(this IApplicationBuilder app, ICollection<Type> types)
+    public static IApplicationBuilder InitializePaginatedSearchAndFilterCache(
+        [NotNull] this IApplicationBuilder app,
+        [NotNull] ICollection<Type> types)
     {
-        IClassPropertyTypesCache propertyTypesCache = app.ApplicationServices.GetRequiredService<IClassPropertyTypesCache>();
+        IClassFieldsCache propertyTypesCache = app.ApplicationServices.GetRequiredService<IClassFieldsCache>();
 
         propertyTypesCache.InitializeAsync(types).GetAwaiter().GetResult();
 
