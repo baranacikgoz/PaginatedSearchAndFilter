@@ -30,6 +30,10 @@ public class PostgreSqlSyntaxSqlBuilder : ISqlBuilder
 
         AppendBaseQuery(baseQuery, sqlBuilder);
         await AppendAdvancedSearch<T>(baseTableAlias, advancedSearches, sqlBuilder, parameters).ConfigureAwait(false);
+        // TODO AppendCombinedAdvancedFilters
+        // TODO AppendOrderBys
+        // TODO AppendPaging
+
 
         return (sqlBuilder.ToString(), parameters);
     }
